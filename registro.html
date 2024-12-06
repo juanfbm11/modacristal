@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="editar.css">
+    <script>
+        // Función para redirigir al menú
+        function redirectToMenu(event) {
+            event.preventDefault(); // Evitar el comportamiento por defecto del formulario
+            // Aquí puedes validar las credenciales si es necesario
+            window.location.href = "HOME.html"; // Redirige a la página del menú
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <section id="content">
+            <form action="" method="POST" onsubmit="redirectToMenu(event)">
+                <h1>Login</h1>
+                <div>
+                    <label for="username">Usuario</label>
+                    <input type="text" placeholder="Username" id="username" required>
+                </div>
+                <div>
+                    <label for="password">Contraseña</label>
+                    <input type="password" placeholder="Password" id="password" required>
+                </div>
+                <div>
+                    <input type="submit" value="Log in">
+                    <a href="#">Olvido Contraseña</a>
+                    <a href="#">Registrarse</a>
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
